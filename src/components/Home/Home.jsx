@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css";
 import Social from "./Social";
 import Data from "./Data";
-import ScrollDown from "./scrollDown";
+import {ScrollDown} from "./ScrollDown";
 function Home() {
   return (
     <section className="home section" id="home">
