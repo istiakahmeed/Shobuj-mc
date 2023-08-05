@@ -3,16 +3,30 @@ import "./About.css";
 import AboutImg from "../../assets/about.jpg";
 import CV from "../../assets/Cv.pdf";
 import Info from "./Info";
+import  { useEffect } from 'react';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+
 function About() {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+    
+  }, []);
   return (
-    <section className="about section" id="about">
+    <section
+      className="about section"
+      id="about"
+      
+    >
       <h2 className="section__title">About Me</h2>
       <span className="section__subtitle">My Introduction</span>
 
-      <div className="about__container container grid">
-        <div className="about__image">
+      <div className="about__container container grid" data-aos="zoom-in-up">
+        <div className="about__image"  data-aos="flip-right">
           <div>
-          <img src={AboutImg} alt="" className="about__img" />
+            <img src={AboutImg} alt="" className="about__img" />
           </div>
         </div>
         <div className="about__data">
